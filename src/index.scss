@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primary-color: #be3144;
+  --secondary-color: #2c2d30;
+  --tertiary-color: #f0f0f0;
+  --quarternary-color: #45567d;
+}
+
+main {
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+  min-height: calc(100vh - 76px);
+
+  &:nth-child(2n - 1) {
+    background-color: var(--secondary-color);
+  }
+
+  &:nth-child(2n) {
+    background-color: var(--quarternary-color);
+  }
+}
+
+.section-heading {
+  color: var(--tertiary-color);
+  padding-top: 5rem;
+  padding-bottom: 0;
+  text-align: center;
+  font-size: 5vh;
+  text-decoration: underline;
+}
+
+// Navabar
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-color: var(--primary-color);
+}
+
+.logo {
+  padding: 10px 10px;
+  border: 3px solid var(--tertiary-color);
+  color: var(--tertiary-color);
+  font-weight: 700;
+}
+
+.navlinks {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navlink > a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+  font-weight: 600;
+
+  &:hover {
+    color: var(--secondary-color);
+  }
+}
+
+// Intro
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  font-size: 5vh;
+}
+
+.self-image {
+  width: 200px;
+  margin: 5rem 0;
+}
+
+.role {
+  font-style: italic;
+  color: var(--primary-color);
+}
+
+// Projects
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.project-image {
+  width: 100%;
+  height: calc(100% - 6.8rem);
+}
