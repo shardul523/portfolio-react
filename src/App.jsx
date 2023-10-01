@@ -5,7 +5,9 @@ import Projects from "./components/Projects";
 const App = () => {
     return (
         <>
-            <Navbar/>
+            <header>
+                <Navbar/>
+            </header>
             <main>
                 <Intro/>
                 <Projects/>

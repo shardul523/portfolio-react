@@ -39,9 +39,12 @@ main {
 
 // Navabar
 
-.navbar {
+header {
   position: sticky;
   top: 0;
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
