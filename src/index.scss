@@ -49,6 +49,13 @@ main {
   background-color: var(--primary-color);
 }
 
+@media (width < 725px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
 .logo {
   padding: 10px 10px;
   border: 3px solid var(--tertiary-color);
@@ -94,20 +101,44 @@ main {
 }
 
 // Projects
-.projects {
+.projects-list {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  gap: 2rem;
 }
 
-.projects-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
-  max-width: 1280px;
-  margin: 0 auto;
+.project {
+  background-color: var(--secondary-color);
+  border: 10px solid var(--secondary-color);
+  border-radius: 7px;
+
+  .brackets {
+    color: orange;
+    visibility: hidden;
+  }
+
+  &:hover .brackets {
+    visibility: visible;
+  }
+}
+
+.project-name {
+  color: var(--tertiary-color);
+  text-align: center;
+  margin-top: 10px;
+  font-size: larger;
 }
 
 .project-image {
-  width: 100%;
-  height: calc(100% - 6.8rem);
+  width: 320px;
+  height: 360px;
+  border-radius: 7px;
+}
+
+@media (width < 400px) {
+  .project-image {
+    width: 250px;
+  }
 }
