@@ -1,10 +1,10 @@
 const About = () => (
   <section className="section">
     <h2 className="section-heading">About Me</h2>
-    <div>
+    <div className='about-description'>
       <p>
         I am currently pursuing my B.Tech in Computer Science & Engineering from{" "}
-        <a>Madan Mohan Malviya University of Technology</a> and will be
+        <a href="http://www.mmmut.ac.in/">Madan Mohan Malviya University of Technology</a> and will be
         graduating in the fall of 2024.
       </p>
       <p>
